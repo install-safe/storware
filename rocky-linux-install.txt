@@ -1,0 +1,23 @@
+install Rocky Linux 8.10
+set hostname , set  ip address 
+stop firewall 
+ sudo systemctl disable firewalld
+ sudo systemctl stop firewalld
+[root@vprotect ~]# sudo systemctl stop firewalld
+[root@vprotect ~]# sudo systemctl status firewalld
+● firewalld.service - firewalld - dynamic firewall daemon
+   Loaded: loaded (/usr/lib/systemd/system/firewalld.service; disabled; vendor preset: enabled)
+   Active: inactive (dead)
+     Docs: man:firewalld(1)
+
+Mar 31 12:08:41 rocky systemd[1]: Starting firewalld - dynamic firewall daemon...
+Mar 31 12:08:41 rocky systemd[1]: Started firewalld - dynamic firewall daemon.
+Mar 31 12:08:41 rocky firewalld[932]: WARNING: AllowZoneDrifting is enabled. This is considered an insecure configuration option. It
+Mar 31 12:14:41 vprotect systemd[1]: Stopping firewalld - dynamic firewall daemon...
+Mar 31 12:14:42 vprotect systemd[1]: firewalld.service: Succeeded.
+Mar 31 12:14:42 vprotect systemd[1]: Stopped firewalld - dynamic firewall daemon.
+
+
+upload vprotect-19.19.0.710.tgz
+tar xvf vprotect-19.19.0.710.tgz
+ mv el8/ /root/vprotect-repo
