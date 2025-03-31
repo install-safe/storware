@@ -8,3 +8,4 @@ Download the vProtect package from the Dell Online Support download page<br>
 vprotect-19.19.0.710.tgz <br>
 ![vprotect ](image/vprotect-dell-download.png)
 
+#Rocky linux 8.10 
