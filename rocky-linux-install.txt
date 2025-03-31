@@ -316,5 +316,5 @@ rpm -ivh DDBoostFS-7.13.1.20-1149144.rhel.x86_64.rpm
 
 open browser
 https://vprotect_IP:8181
-#verify DD 
+#verify DD   enable DD boost , 先不用建storage unit
 #go to vProtect WEB verify and go wizard
