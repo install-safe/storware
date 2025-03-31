@@ -311,6 +311,10 @@ localhost                  : ok=42   changed=24   unreachable=0    failed=0    s
 DONE! Try to log into your vProtect Server console now.
 [root@vprotect ~]#
 
+#install boost in the vprotect 也要先做. 等等 add backup dest 之語會需要用boost  mount 
+rpm -ivh DDBoostFS-7.13.1.20-1149144.rhel.x86_64.rpm                
+
 open browser
 https://vprotect_IP:8181
-
+#verify DD 
+#go to vProtect WEB verify and go wizard
