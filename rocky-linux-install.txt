@@ -311,3 +311,6 @@ localhost                  : ok=42   changed=24   unreachable=0    failed=0    s
 DONE! Try to log into your vProtect Server console now.
 [root@vprotect ~]#
 
+open browser
+https://vprotect_IP:8181
+
