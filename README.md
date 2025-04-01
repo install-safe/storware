@@ -17,7 +17,7 @@ drwxr-xr-x. 2 vprotect vprotect   6 Apr  1 10:38 import   還原時的stage會�
 drwxr-xr-x. 2 vprotect vprotect  20 Apr  1 10:53 proxmox  這是後來透過configuration wizard  所產生的目錄 , 本例用於local filesystem<br>
 drwxr-xr-x. 4 vprotect vprotect 124 Apr  1 10:57 staging  備份時的stage會放在這<br>
 drwxr-xr-x. 3 vprotect vprotect  63 Apr  1 09:55 vcenter01 這是後來透過configuration wizard  所產生的目錄 , 本例用於local filesystem<br>
-如果是放於本地考量 ? 空間要夠 , 另外 staging 也要考量空間 詳storware sizer <br>
+如果是放於本地考量 ? 空間要夠 , 另外 staging 也要考量空間 詳storware sizer  https://docs.storware.eu/deployment/sizing   <br>
 過程中如果要觀查stage空量 可以watch -d /vprotect_data/staging  <br>
 純storware可以備的來源,dell-vProtect有不一樣
 ![storeware ](image/backup-source.png)
