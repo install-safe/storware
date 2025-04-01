@@ -6,6 +6,6 @@ RHEL 8/9 requires active subscription<br>
 RHEL#   subscription-manager register --username yourmailaddress@domain --password yourpassword --auto-attach<br>
 Download the vProtect package from the Dell Online Support download page<br>
 vprotect-19.19.0.710.tgz <br>
-![vprotect ](image/vprotect-dell-download.png)
+![vprotect ](vprotect-dell-download.png)
 
 #Rocky linux 8.10 
