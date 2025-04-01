@@ -1,9 +1,11 @@
-Storeware <br>
-![storeware ](image/storeware-1.png)
+Storware <br>
+![storware ](image/storeware-1.png)
 https://storware.eu   TRY NOW 填資料獲取iso 載點與郵件會收到license.key 60天Trial <br>
 all-in-one VM 規格  10 vCPU , 12 GB memory , Disk1 30 GB , Disk2 200GB up視需要 , nic x1  <br>
 iso 開機安裝 , 改IP 
 https://ip-address   admin/密碼是vPr0tect   , console/ssh root/密碼是vPr0tect<br>
+![login ](image/storware-login.png)
+
 
 [root@storware-backup-and-recovery /]# ls -lat<br>
 total 24
