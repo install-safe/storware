@@ -1,10 +1,13 @@
 Storware / vProtect 與 Data Domain 設定
 DD 要做的設定:
-    1. 建 Mtree
-    2. 建 User
-    3. StorageUnit 連結
+. 建 User                     # user add vprotect role none    
+    A. 建 Mtree                    # mtree create /data/col1/vprotect_backups
+      二選一 應該做那種?
+    B. StorageUnit 連結            #
 
 Storware/vProtect 系統要做的設定:
     1. 裝 BoostFS RPM
-    2. 設 lockbox
+                         rpm -ivh DDBoostFS-7.13.1.20-1149144.rhel.x86_64.rpm
+                       
+    2. 設 lockbox         
     3. boost mount
