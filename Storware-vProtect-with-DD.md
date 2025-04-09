@@ -4,7 +4,7 @@ DD 要做的設定:
 2. 建 User
 3. StorageUnit 連結
 
-Storware/vProtect 系統要做的設定:
+Storware/vProtect 系統要做的設定:<br>
 1.裝 BoostFS RPM
 2.設 lockbox
 3.boost mount
