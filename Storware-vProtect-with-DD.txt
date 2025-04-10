@@ -11,3 +11,11 @@ Storware/vProtect 系統要做的設定:
                        
     2. 設 lockbox         
     3. boost mount
+
+
+Backup Destinations > File System 注意事項
+/vprotect_data 目錄下要新建目標的子目錄 , 
+owner 要是 vprotect ?
+.sbrbd 看來是寫入一串 "internalId","timestamp"    這東西產生才代表 Backup Destinations 已經被系統接受新建
+新建完internal 會找到這 新建寫入一個UUID名型式的目錄  , Internal DB Backup 完成 , Dashboard 右上的 Internal DB Backup 錄燈
+
