@@ -23,3 +23,5 @@ drwxr-xr-x. 3 vprotect vprotect  63 Apr  1 09:55 vcenter01 這是後來透過con
 過程中如果要觀查stage空量 可以watch -d /vprotect_data/staging  <br>
 純storware可以備的來源,dell-vProtect有不一樣
 ![storeware ](image/backup-source.png)
+
+如果搞不起來去dell demo 看
