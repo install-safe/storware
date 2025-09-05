@@ -59,7 +59,9 @@ Host DD-ip-address
 Account name: DD建一個vprotect 帳號 Storage Unit name:nutanix-1820
 Path: 這裡指的是在vprotect的路徑 /vprotect_data/nutanix-1720
 
+
 62  /opt/emc/boostfs/bin/boostfs lockbox set -d 192.168.55.32 -u vprotect -s nutanix-1720
+重開機之後會不見, 要寫到開機啟動 
 63  /opt/emc/boostfs/bin/boostfs mount -o allow-others=true -d 192.168.55.32 -s nutanix-1720 /vprotect_data/nutanix-1720
 >>Summit ok 
 
