@@ -69,6 +69,8 @@ Path: 這裡指的是在vprotect的路徑 /vprotect_data/nutanix-1720
 先去 DD 看 vprotect UID GID
 
 
+#vprotect Virtual Environments > Virtualization Providers對於 Nutanix CE 無效
+
 
 
 
