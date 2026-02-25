@@ -72,8 +72,46 @@ Path: 這裡指的是在vprotect的路徑 /vprotect_data/nutanix-1720
 #vprotect Virtual Environments > Virtualization Providers對於 Nutanix CE 無效
 
 
+#### 重裝一台新的vProtect 並移轉過去
+    8  nmtui
+    9  ip a
+   10  ping 192.168.236.254
+   11  exit
+   12  find /opt/vprotect -name "*.properties" -o -name "*.conf" | xargs du -h
+   13  cat /opt/vprotect/server/quarkus.properties | grep "datasource"
+   14  systemctl stop vprotect-server vprotect-node
+   15  # 假設您的備份檔在 /tmp/vprotect_db.sql.gz
+   16  gunzip < /tmp/vprotect_db.sql.gz | mysql -u vprotect -pbws9AgS3nxVIk8iG67UfBmySc45fq6Yr vprotect
+   17  # 清理 Quarkus/Server 運行時產生的暫存
+   18  sudo rm -rf /opt/vprotect/server/work/*
+   19  sudo rm -rf /opt/vprotect/server/tmp/*
+   20  # 啟動服務
+   21  sudo systemctl start vprotect-server vprotect-node
+   22  pvcreate /dev/sdb
+   23   vgextend cs /dev/sdb
+   24   lvextend -l +100%FREE /dev/cs/root
+   25   xfs_growfs /
+   26   df -h
+   27  cd /vprotect_data/
+   28  ls -lat
+   29  mkdir backup
+   30   chown vprotect -R backup/
+   31   chgrp -R vprotect:vprotect backup
+   32   chown -R vprotect:vprotect backup
+   
+   37  rpm -ivh DDBoostFS-7.13.1.40-1186210.rhel.x86_64.rpm
+   38   /opt/emc/boostfs/bin/boostfs lockbox set -d 192.168.236.50 -u vprotect0120 -s vprotect0120
+   39   /opt/emc/boostfs/bin/boostfs mount -o allow-others=true -d 192.168.236.50 -s vprotect0120 /vprotect_data/backup
+   40  df -h
 
 
+  〉〉進去UI WEB確認有restore db ok , 接著在backup desination  >>> dd > Reinitialized 
+
+  >> 試著 reinventory , 
+
+  >>接著試跑 Backup-policy 有沒有錯誤
+>  >
+>  >
 
 
  
