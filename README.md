@@ -81,6 +81,29 @@ Path: 這裡指的是在vprotect的路徑 /vprotect_data/nutanix-1720
    13  cat /opt/vprotect/server/quarkus.properties | grep "datasource"
    14  systemctl stop vprotect-server vprotect-node
    15  # 假設您的備份檔在 /tmp/vprotect_db.sql.gz
+
+#密碼那來的?
+Gemini 說了
+從您的搜尋結果來看，情況已經明朗了：您使用的版本是較新的 Storware (vProtect) 5.x 或 6.x 以上版本，這些版本已經從舊有的 Payara 平台遷移到了 Quarkus 架構。
+在這種架構下，資料庫的連線資訊（包含密碼）不再存放在 payara.properties，而是統一存放在：
+/opt/vprotect/server/quarkus.properties
+
+1. 獲取資料庫密碼
+請執行以下指令來查看資料庫密碼：
+
+Bash
+cat /opt/vprotect/server/quarkus.properties | grep "datasource"
+您應該會看到類似這樣的內容：
+
+quarkus.datasource.username=vprotect
+
+quarkus.datasource.password=您的密碼
+[root@Dell-vProtect ~]# cat /opt/vprotect/server/quarkus.properties | grep "datasource"
+quarkus.datasource.jdbc.url=jdbc:mariadb://localhost:3306/vprotect
+quarkus.datasource.username=vprotect
+quarkus.datasource.password=bws9AgS3nxVIk8iG67UfBmySc45fq6Yr
+
+   
    16  gunzip < /tmp/vprotect_db.sql.gz | mysql -u vprotect -pbws9AgS3nxVIk8iG67UfBmySc45fq6Yr vprotect
    17  # 清理 Quarkus/Server 運行時產生的暫存
    18  sudo rm -rf /opt/vprotect/server/work/*
