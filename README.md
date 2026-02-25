@@ -135,5 +135,5 @@ quarkus.datasource.password=bws9AgS3nxVIk8iG67UfBmySc45fq6Yr
 >  >
 >  >
 
-
+|| 備註ｄｅｌｌ　support download vprotect ove source file , 同一時間版號的 Trial end day 會是一樣的
  
