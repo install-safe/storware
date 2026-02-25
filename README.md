@@ -136,4 +136,52 @@ quarkus.datasource.password=bws9AgS3nxVIk8iG67UfBmySc45fq6Yr
 >  >
 
 || 備註ｄｅｌｌ　support download vprotect ove source file , 同一時間版號的 Trial end day 會是一樣的
- 
+internal db 那個問題
+
+
+
+
+[root@Dell-vProtect tmp]# cd /opt/vprotect/server/scripts/
+[root@Dell-vProtect scripts]# ls -lat
+total 40
+drwxrwx---. 7 vprotect vprotect 4096 Feb 25 04:14 ..
+drwxrwx---. 3 vprotect vprotect 4096 Dec  8 12:21 .
+drwxrwx---. 2 vprotect vprotect   53 Dec  8 12:21 application
+-r-xr-x---. 1 vprotect vprotect  482 Oct 28 10:49 backup_db.sh
+-r-xr-x---. 1 vprotect vprotect 3748 Oct 28 10:49 diagnose_database.sh
+-r-xr-x---. 1 vprotect vprotect  557 Oct 28 10:49 generate-pdf.py
+-r-xr-x---. 1 vprotect vprotect  468 Oct 28 10:49 server_add_ssl_cert.sh
+-r-xr-x---. 1 vprotect vprotect 7540 Oct 28 10:49 server_jfr.sh
+-r-xr-x---. 1 vprotect vprotect  354 Oct 28 10:49 server_remove_ssl_cert.sh
+-r-xr-x---. 1 vprotect vprotect 1091 Oct 28 10:49 ssl_port_forwarding_firewall-cmd.sh
+[root@Dell-vProtect scripts]# ./backup_db.sh
+[root@Dell-vProtect scripts]# cd /tmp
+[root@Dell-vProtect tmp]# ls -lat
+total 708
+drwxrwxrwt. 15 root     root       4096 Feb 25 04:54 .
+-rw-r--r--.  1 root     root     715450 Feb 25 04:54 vprotect_db.sql.gz
+-rw-rw-rw-.  1 root     root       1975 Feb 25 04:06 Boost_D4_Event.log
+drwxr-xr-x.  2 vprotect vprotect     30 Feb 25 03:59 hsperfdata_vprotect
+drwxrwxrwx.  3 vprotect vprotect     70 Feb 25 03:59 vertx-cache
+drwx------.  3 root     root         17 Feb 25 03:53 systemd-private-48f132d4ec3d4425910868996dce8bac-kdump.service-AH1aM7
+drwxr-xr-x.  2 vprotect vprotect      6 Feb 25 03:52 uploads
+
+
+ 根據您提供的報錯截圖與系統紀錄，該 TaskNotSynchronizedException 錯誤是由於資料庫還原後，Server 端紀錄的任務狀態與 Node 端實際執行情況不一致所致。
+
+要解決 Internal DB Backup 失敗並確保後續自動同步正常運作，請按照以下步驟執行：
+
+1. 清理衝突任務與服務狀態
+還原 DB 後，系統會嘗試執行排程中的資料庫備份，但因為連線索引尚未同步，會導致任務卡死。
+
+取消掛起任務：在 Web UI 的 Task Console 中，將所有狀態為 Failed 或 Running 的 Internal DB Backup 相關任務全部取消 (Cancel/Abort)。
+
+重啟 Node 服務：強制刷新 Node 端的任務狀態。
+
+Bash
+sudo systemctl restart vprotect-node
+
+
+把之前 /tmp  備份刪掉   rm -rf vprotect_db.sql.gz
+再做一次 OK
+
