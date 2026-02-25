@@ -1,0 +1,356 @@
+[root@Dell-vProtect ~]# history
+    1  yum update
+    2  yum clean all
+    3  yum update
+    4  hostnamectl set-hostname Dell-vProtect
+    5  reboot now
+    6  ls -la
+    7  shutdown
+    8  df -h
+    9  fdisk -l
+   10  ip a
+   11  df -h
+   12  sudo poweroff
+   13  nmtui
+   14  ip a
+   15  p[
+   16  ping 192.168.236.254
+   17  exit
+   18  poweroff
+   19  df -h
+   20  fdisk -l
+   21  pvcreate /dev/sdb
+   22  vgextend cs /dev/sdb
+   23  lvextend -l +100%FREE /dev/cs/root
+   24  xfs_growfs /
+   25  df -h
+   26  pwd
+   27  cd /vprotect_data/
+   28  ls -lat
+   29  mkdir backup
+   30  ls -lat
+   31  chown vprotect -R backup/
+   32  ls -lat
+   33  cd ..
+   34  ls -lat
+   35  cd vprotect_data/
+   36  ls -lat
+   37  chgrp
+   38  chgrp -R vprotect:vprotect backup
+   39  ls -lat
+   40  chown -R vprotect:vprotect backup
+   41  ls -lat
+   42  /opt/emc/boostfs/bin/boostfs lockbox set -d 192.168.236.50 -u vprotect0120 -s vprotect0120
+   43  /opt/emc/boostfs/bin/boostfs mount -o allow-others=true -d 192.168.236.50 -s vprotect0120 /vprotect_data/backup
+   44  df -h
+   45  cd /vprotect_data/
+   46  ls -alt
+   47  ls -l P-V-1__100/
+   48  ls -l P-V-1__100/ watch -n 1 | ls -l P-V-1__100/
+   49  ls -l P-V-1__100/ watch -d 1 | ls -l P-V-1__100/
+   50  ls -l P-V-1__100/ watch -n 1 3 ls -l P-V-1__100/
+   51   watch -n 1 3 ls -l P-V-1__100/
+   52   watch -n 1 3 |  ls -l P-V-1__100/
+   53   watch -n 3 ls
+   54   watch -n 3 ls -lat
+   55   watch -n 3 ls -lat P-V-1__100/
+   56   watch -n 3 ls -lat P-V-1__100/ --block-size=M
+   57  pwd
+   58  df -h
+   59   watch -n 3 ls -lat backup/ --block-size=M
+   60   watch -n 3 du -h backup/
+   61  df -h
+   62  ls -lat
+   63  history
+   64  df -h
+   65  ls
+   66  ls -lat
+   67  ls -l P-V-1__100/
+   68  watch -n 1 ls -l P-V-1__100/
+   69  ls -lat
+   70  ls -l backup/
+   71  ls -l backup/P-V-1__100/
+   72  ls -l backup/P-V-1__100/vprotect_data/
+   73  ls -l backup/P-V-1__100/vprotect_data/P-V-1__100/
+   74  ls -l backup/P-V-1__100/vprotect_data/P-V-1__100/scsi0_vm-100-disk-0.raw/
+   75  ls- lat
+   76  ls -lat
+   77  ls -l backup/
+   78  ls -l backup/P-V-1__100/
+   79  ls -l backup/P-V-1__100/vprotect_data/
+   80  ls -l backup/P-V-1__100/vprotect_data/P-V-1__100/
+   81  ls -l backup/P-V-1__100/vprotect_data/P-V-1__100/scsi0_vm-100-disk-0.raw/
+   82  df -h
+   83  poweroff
+   84  ls -lat
+   85  rpm -ivh DDBoostFS-7.13.1.40-1186210.rhel.x86_64.rpm
+   86  cd /vprotect_data/
+   87  ls -lat
+   88  df -h
+   89  history
+   90  /opt/emc/boostfs/bin/boostfs lockbox set -d 192.168.236.50 -u vprotect0120 -s vprotect0120
+   91  /opt/emc/boostfs/bin/boostfs mount -o allow-others=true -d 192.168.236.50 -s vprotect0120 /vprotect_data/backup
+   92  df -h
+   93  cd /vprotect_data/
+   94  ls -lat
+   95  date
+   96  ls -lat
+   97  du -s P-V-1__100/
+   98  du -h P-V-1__100/
+   99  du -s P-V-1__100/
+  100  ls- lat
+  101  ls -lat
+  102  ls -l P-V-2__101/
+  103  cd /opt/vprotect/
+  104  ls -lat
+  105  cd server/
+  106  ls -lat
+  107  cd scripts/
+  108  ls -lat
+  109  ./backup_db.sh
+  110  df -h
+  111  cd /vprotect_data/
+  112  ls -lat
+  113  cd backup/
+  114  ls -lat
+  115  date
+  116  poweroff
+  117  history
+  118  pwd
+  119  vi bfs.sh
+  120  ls -lat
+  121  chmod 755 bfs.sh
+  122  ./bfs.sh
+  123  df -h
+  124  pwd
+  125  df -h
+  126  pwd
+  127  ls -l /vprotect_data/
+  128  watch -n 1 ls -l /vprotect_data/
+  129  watch -n 1 ls -l /vprotect_data/K1-U2204__b5df49bc/
+  130  exit
+  131  cd /vprotect_data/
+  132  ls -lat
+  133  ls -lat backup/
+  134  df -h
+  135  ls -lat
+  136  ls -l backup/
+  137  df -h
+  138  ls -lat
+  139  pwd
+  140  ls -lat
+  141  ls -lat  K2-W22__8d0dbdc7/
+  142  watch -n 1  ls -lat  K2-W22__8d0dbdc7/
+  143  df -h
+  144  cd /vprotect_data/backup/
+  145  ls -lat
+  146  ls -lat K2-W22__8d0dbdc7/
+  147  ls -lat K2-W22__8d0dbdc7/vprotect_data/K2-W22__8d0dbdc7/
+  148  ls -lat K2-W22__8d0dbdc7/vprotect_data/K2-W22__8d0dbdc7/K2-W22_Disk1.raw/
+  149  watch -n 1 ls -lat K2-W22__8d0dbdc7/vprotect_data/K2-W22__8d0dbdc7/K2-W22_Disk1.raw/
+  150  pwd
+  151  ls -lat
+  152  du -h K2-W22__8d0dbdc7
+  153  history
+  154  poweroff
+  155  ls -lat
+  156  df -h
+  157  ./bfs.sh
+  158  df -h
+  159  vi bfs.sh
+  160  ls -lat
+  161  cd /vprotect_data/
+  162  ls -lat
+  163  du -h  /vprotect_data/K1-U2204__b5df49bc/
+  164  du -s  /vprotect_data/K1-U2204__b5df49bc/
+  165  du -g  /vprotect_data/K1-U2204__b5df49bc/
+  166  du -G  /vprotect_data/K1-U2204__b5df49bc/
+  167  du -h  /vprotect_data/K1-U2204__b5df49bc/
+  168  df -h
+  169  cd /vprotect_data/
+  170  ls -lat
+  171  du -s K1-U2204__b5df49bc/
+  172  du -h K1-U2204__b5df49bc/
+  173  du -s K1-U2204__b5df49bc/
+  174  ls- lat
+  175  ls -lat
+  176  du -s K1-U2204__b5df49bc/
+  177  pwd
+  178  clear
+  179  pwd
+  180  exit
+  181  ls -lat
+  182  cd /opt/vprotect
+  183  ls -lat
+  184  cd server
+  185  ls -lat
+  186  cd scripts/
+  187  ls -lat
+  188  ./backup_db.sh
+  189  cd /tmp
+  190  ls -l *.gz
+  191  ls -l /opt/vprotect/server/scripts/backup_db.sh
+  192  sudo rm -f /tmp/vprotect_db.sql.gz
+  193  ls -l *.gz
+  194  exit
+  195  ls -lat
+  196  df -h
+  197  cd vp
+  198  cd /vprotect_data/
+  199  ls -alt
+  200  du -s K1-U2204__b5df49bc/
+  201  watch -n 1 du -s K1-U2204__b5df49bc/
+  202  ls- lat
+  203  ls -lat
+  204  cat /etc/passwd
+  205  cat /etc/passwd | grep ha
+  206  cat /etc/passwd | grep cluster
+  207  pcs
+  208  mariadb
+  209  clear
+  210  df -h
+  211  clear
+  212  ls -lat
+  213  du -s K1-U2204__b5df49bc/
+  214  watch -n 1 du -s K1-U2204__b5df49bc/
+  215  ls -lat
+  216  cd backup/
+  217  ls -lat
+  218  du -s K1-U2204__b5df49bc/
+  219  ls -lat
+  220  cd ..
+  221  ls -lat
+  222  cd backup/
+  223  ls -lat
+  224  cd K1-U2204__b5df49bc/
+  225  ls -lat
+  226  cd vprotect_data/
+  227  ls -lat
+  228  ls -l K1-U2204__b5df49bc/
+  229  pwd
+  230  cd ..
+  231  ls -lat
+  232  cd ..
+  233  ls -lat
+  234  ls -l backup/K1-U2204__b5df49bc/vprotect_data/
+  235  ls -l backup/K1-U2204__b5df49bc/vprotect_data/K1-U2204__b5df49bc/
+  236  cd /
+  237  find . -name 40bea17e-6a3f-4be1-98c2-7bbb32a73df8 -print
+  238  du -s  backup/K1-U2204__b5df49bc/vprotect_data/K1-U2204__b5df49bc/
+  239  du -s  backup/K1-U2204__b5df49bc/vprotect_data
+  240  pwd
+  241  cd vprotect_data/
+  242  du -s  backup/K1-U2204__b5df49bc/vprotect_data
+  243  df -h
+  244  pwd
+  245  ls -lat
+  246  ls -l import/
+  247  ls -l import/40bea17e-6a3f-4be1-98c2-7bbb32a73df8/
+  248  df -h
+  249  du -h /mnt/vprotect/K1-U2204/1770713622000
+  250  cd  /mnt/vprotect/K1-U2204/1770713622000
+  251  ls -lat
+  252  df -h
+  253  cd /vprotect_data/
+  254  ls -lat
+  255  cd /tmp
+  256  ls- lat | more
+  257  ls -lat | more
+  258  pwd
+  259  history
+  260  clear
+  261  df -h
+  262  exit
+  263  ls -lat
+  264  ./bfs.sh
+  265  poweroff
+  266  ls -lat
+  267  history
+  268  cat bfs.sh
+  269  df -h
+  270  ./bfs.sh
+  271  ls -lat
+  272  df -h
+  273  cd /vprotect_data/backup/
+  274  ls -lat
+  275  cd K1-U2204__b5df49bc/
+  276  ls -lat
+  277  cd vprotect_data/
+  278  ls -lat
+  279  cd K1-U2204__b5df49bc/
+  280  ls -lat
+  281  ls -l K1-U2204_Disk1.raw/
+  282  ls -l K1-U2204_Disk1.raw/1770714152518
+  283  ls -l K1-U2204_Disk1.raw/1770714152518 K1-U2204_Disk1.raw/
+  284  ls -l K1-U2204_Disk1.raw
+  285  cd    K1-U2204_Disk1.raw/1770714152518
+  286  ls -lat
+  287  cd K1-U2204_Disk1.raw/
+  288  ls -lat
+  289  ls -l 1770891211599
+  290  pwd
+  291  cd ..
+  292  ls -lat
+  293  ls -l metadata.ovf/
+  294  cd ..
+  295  ls -lat
+  296  cd ...
+  297  ls -lat
+  298  cd ..
+  299  ls -lat
+  300  cd ..
+  301  pwd
+  302  ls -lat
+  303  cd c1d04eb4-a352-4128-a1ca-8cad959b24f9
+  304  ls -lat
+  305  cd vprotect_data/
+  306  ls -lat
+  307  cd app-c1d04eb4-a352-4128-a1ca-8cad959b24f9/
+  308  ls -alt
+  309  df -h
+  310  history
+  311  pwd
+  312  ls -lat
+  313  cat bfs.sh
+  314  cd /vprotect_data/
+  315  cd backup
+  316  ls -lat
+  317  cd c1d04eb4-a352-4128-a1ca-8cad959b24f9/
+  318  ls -lat
+  319  cd vprotect_data/
+  320  ls -lat
+  321  cd app-c1d04eb4-a352-4128-a1ca-8cad959b24f9/
+  322  ls -lat
+  323  pwd
+  324  cd /tmp
+  325  ls -lat
+  326  cd /opt
+  327  ls -lat
+  328  cd vprotect/
+  329  ls -lat
+  330  pwd
+  331  cd server/
+  332  ls -lat
+  333  cd ..
+  334  ls -lat
+  335  cd node/
+  336  ls -lat
+  337  cat node.properties
+  338  find /opt/vprotect -name "*.properties"
+  339  sudo mysql -u root
+  340  sudo mysql -u vprotect
+  341  pwd
+  342  ls -lat
+  343  sudo systemctl stop mariadb
+  344  sudo mysqld_safe --skip-grant-tables --skip-networking &
+  345  sudo pkill mysqld_safe
+  346  sudo systemctl start mariadb
+  347  cd ~
+  348  reboot
+  349  cd ~
+  350  cat bfs.sh
+  351  history
+[root@Dell-vProtect ~]# history
+Broadcast message from root@Dell-vProtect on tty1 (Wed 2026-02-25 04:24:27 CET):
+
+The system will power off now!

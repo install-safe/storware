@@ -1,0 +1,110 @@
+[root@Dell-vProtect vprotect_db.sql.gz]# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: ens192: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:50:56:85:97:d9 brd ff:ff:ff:ff:ff:ff
+    altname enp11s0
+    inet 192.168.236.61/24 brd 192.168.236.255 scope global noprefixroute ens192
+       valid_lft forever preferred_lft forever
+    inet6 fe80::250:56ff:fe85:97d9/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+[root@Dell-vProtect vprotect_db.sql.gz]# history
+    1  yum update
+    2  yum clean all
+    3  yum update
+    4  hostnamectl set-hostname Dell-vProtect
+    5  reboot now
+    6  ls -la
+    7  shutdown
+    8  nmtui
+    9  ip a
+   10  ping 192.168.236.254
+   11  exit
+   12  find /opt/vprotect -name "*.properties" -o -name "*.conf" | xargs du -h
+   13  cat /opt/vprotect/server/quarkus.properties | grep "datasource"
+   14  systemctl stop vprotect-server vprotect-node
+   15  # 假設您的備份檔在 /tmp/vprotect_db.sql.gz
+   16  gunzip < /tmp/vprotect_db.sql.gz | mysql -u vprotect -pbws9AgS3nxVIk8iG67UfBmySc45fq6Yr vprotect
+   17  # 清理 Quarkus/Server 運行時產生的暫存
+   18  sudo rm -rf /opt/vprotect/server/work/*
+   19  sudo rm -rf /opt/vprotect/server/tmp/*
+   20  # 啟動服務
+   21  sudo systemctl start vprotect-server vprotect-node
+   22  pvcreate /dev/sdb
+   23   vgextend cs /dev/sdb
+   24   lvextend -l +100%FREE /dev/cs/root
+   25   xfs_growfs /
+   26   df -h
+   27  cd /vprotect_data/
+   28  ls -lat
+   29  mkdir backup
+   30   chown vprotect -R backup/
+   31   chgrp -R vprotect:vprotect backup
+   32   chown -R vprotect:vprotect backup
+   33   /opt/emc/boostfs/bin/boostfs lockbox set -d 192.168.236.50 -u vprotect0120 -s vprotect0120
+   34  cd ~
+   35  pwd
+   36  ls -lat
+   37  rpm -ivh DDBoostFS-7.13.1.40-1186210.rhel.x86_64.rpm
+   38   /opt/emc/boostfs/bin/boostfs lockbox set -d 192.168.236.50 -u vprotect0120 -s vprotect0120
+   39   /opt/emc/boostfs/bin/boostfs mount -o allow-others=true -d 192.168.236.50 -s vprotect0120 /vprotect_data/backup
+   40  df -h
+   41  cd /vprotect_data/
+   42  ls -lat
+   43  pwd
+   44  ls -lat
+   45  ls -l backup/
+   46  ls -lat
+   47  df -h
+   48  du -s K1-U2204__b5df49bc/
+   49  history
+   50  du -s K1-U2204__b5df49bc/
+   51  df -h
+   52  du -s K1-U2204__b5df49bc/
+   53  ls -l
+   54  cd backup/
+   55  ls -lat
+   56  cd K1-U2204
+   57  cd K1-U2204__b5df49bc/
+   58  ls -lat
+   59  cd vprotect_data/
+   60  ls -alt
+   61  cd K1-U2204__b5df49bc/
+   62  ls -lat
+   63  cd /
+   64  df -h
+   65  history
+   66  pwd
+   67  ls -lat
+   68  cd /tmp
+   69  ls -lat
+   70  cd /opt/vprotect/server/scripts/
+   71  ls -lat
+   72  ./backup_db.sh
+   73  cd /tmp
+   74  ls -lat
+   75  sudo systemctl restart vprotect-node
+   76  pwd
+   77  ls -lat
+   78  rm -rf vprotect_db.sql.gz
+   79  ls -lat
+   80  /opt/vprotect/server/scripts/backup_db.sh
+   81  ls- lat
+   82  ls -lat
+   83  rm -rf vprotect_db.sql.gz
+   84  pwd
+   85  ls -lat
+   86  cd /vprotect_data/backup/
+   87  ls -lat
+   88  cd c1d04eb4-a352-4128-a1ca-8cad959b24f9/
+   89  ls -lat
+   90  cd vprotect_data/app-c1d04eb4-a352-4128-a1ca-8cad959b24f9/vprotect_db.sql.gz/
+   91  ls -lat
+   92  date
+   93  ip a
+   94  history
+[root@Dell-vProtect vprotect_db.sql.gz]#
