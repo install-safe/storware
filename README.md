@@ -183,5 +183,14 @@ sudo systemctl restart vprotect-node
 
 
 把之前 /tmp  備份刪掉   rm -rf vprotect_db.sql.gz
-再做一次 OK
+再做一次 OK 再同步檢查  有沒有檔案產生 時間對不對
+[root@Dell-vProtect c1d04eb4-a352-4128-a1ca-8cad959b24f9]# cd vprotect_data/app-c1d04eb4-a352-4128-a1ca-8cad959b24f9/vprotect_db.sql.gz/
+[root@Dell-vProtect vprotect_db.sql.gz]# ls -lat
+total 89
+drwxrwxr-x. 2 vprotect users    225 Feb 25  2026 .
+-rwxrwxr-x. 1 vprotect users 718609 Feb 25 05:07 1771992471950
+-rwxrwxr-x. 1 vprotect users 709109 Feb 24 12:00 1771930828503
+drwxrwxr-x. 3 vprotect users    168 Jan 28 01:43 ..
+[root@Dell-vProtect vprotect_db.sql.gz]# date
+Wed Feb 25 05:09:47 AM CET 2026
 
