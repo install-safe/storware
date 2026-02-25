@@ -71,7 +71,7 @@ Path: 這裡指的是在vprotect的路徑 /vprotect_data/nutanix-1720
 
 #vprotect Virtual Environments > Virtualization Providers對於 Nutanix CE 無效
 
-// 重裝一台新的vProtect 並移轉過去
+// 重裝一台新的vProtect 並移轉過去  ##看github edit 原始內容
     8  nmtui
     9  ip a
    10  ping 192.168.236.254
@@ -81,7 +81,7 @@ Path: 這裡指的是在vprotect的路徑 /vprotect_data/nutanix-1720
    14  systemctl stop vprotect-server vprotect-node
    15  # 假設您的備份檔在 /tmp/vprotect_db.sql.gz
 
-#密碼那來的?
+// 密碼那來的?
 Gemini 說了
 從您的搜尋結果來看，情況已經明朗了：您使用的版本是較新的 Storware (vProtect) 5.x 或 6.x 以上版本，這些版本已經從舊有的 Payara 平台遷移到了 Quarkus 架構。
 在這種架構下，資料庫的連線資訊（包含密碼）不再存放在 payara.properties，而是統一存放在：
