@@ -71,8 +71,7 @@ Path: 這裡指的是在vprotect的路徑 /vprotect_data/nutanix-1720
 
 #vprotect Virtual Environments > Virtualization Providers對於 Nutanix CE 無效
 
-
-#### 重裝一台新的vProtect 並移轉過去
+// 重裝一台新的vProtect 並移轉過去
     8  nmtui
     9  ip a
    10  ping 192.168.236.254
